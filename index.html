@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Registration Form</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #e8f1fb, #f3eefb);
+        color: #2f3b4c;
+        margin: 0;
+        padding: 30px 15px;
+      }
+
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 25px 35px 35px;
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(80, 110, 160, 0.15);
+      }
+
+      h1 {
+        text-align: center;
+        color: #3b6ea8;
+        margin-top: 0;
+      }
+
+      fieldset {
+        border: 1.5px solid #cfe0f3;
+        border-radius: 10px;
+        background: #f8fbff;
+        padding: 15px 20px;
+      }
+
+      legend {
+        color: #3b6ea8;
+        font-weight: 600;
+        padding: 0 10px;
+      }
+
+      table {
+        width: 100%;
+        border-spacing: 0 6px;
+      }
+
+      td:first-child {
+        width: 38%;
+        font-weight: 500;
+      }
+
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="password"],
+      input[type="date"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #c3d5ea;
+        border-radius: 6px;
+        background: #ffffff;
+        font-size: 14px;
+        color: #2f3b4c;
+        outline: none;
+        transition: 0.2s;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #6aa3dd;
+        box-shadow: 0 0 0 3px rgba(106, 163, 221, 0.25);
+      }
+
+      input[type="file"] {
+        font-size: 14px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        accent-color: #5b9bd5;
+        margin-left: 8px;
+      }
+
+      select {
+        max-width: 260px;
+      }
+
+      textarea {
+        resize: vertical;
+        margin-top: 6px;
+      }
+
+      .row {
+        margin-bottom: 14px;
+      }
+
+      .row label.title {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+
+      button {
+        background: #5b9bd5;
+        color: #ffffff;
+        border: none;
+        padding: 9px 22px;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      button:hover {
+        background: #4688c4;
+      }
+
+      button[type="button"] {
+        background: #9fc5e8;
+      }
+
+      button[type="button"]:hover {
+        background: #85b4de;
+      }
+
+      @media (max-width: 520px) {
+        .container {
+          padding: 20px;
+        }
+        td {
+          display: block;
+          width: 100% !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Course Registration Form</h1>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+        <!-- Personal Details -->
+        <fieldset>
+          <legend>Personal details</legend>
+
+          <table>
+            <tr>
+              <td><label for="fname">First Name</label></td>
+              <td>
+                <input
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  placeholder="Ex:Sinchana"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="sname">Surname</label></td>
+              <td>
+                <input
+                  type="text"
+                  id="sname"
+                  name="sname"
+                  placeholder="Ex:C R"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="mobile">Mobile number</label></td>
+              <td>
+                <input
+                  type="tel"
+                  id="mobile"
+                  name="mobile"
+                  placeholder="Ex:9876543210"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="email">Email</label></td>
+              <td>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Ex:sinchh0308@gmail.com"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="pass">Password</label></td>
+              <td>
+                <input
+                  type="password"
+                  id="pass"
+                  name="pass"
+                  placeholder="min 5 characters"
+                  minlength="5"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="cpass">Confirm Password</label></td>
+              <td>
+                <input
+                  type="password"
+                  id="cpass"
+                  name="cpass"
+                  placeholder="min 5 characters"
+                  minlength="5"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="dob">DOB</label></td>
+              <td><input type="date" id="dob" name="dob" required /></td>
+            </tr>
+            <tr>
+              <td>Gender</td>
+              <td>
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+
+                <input type="radio" id="custom" name="gender" value="custom" />
+                <label for="custom">Custom</label>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="country">Select Country</label></td>
+              <td>
+                <select id="country" name="country">
+                  <option value="INDIA" selected>INDIA</option>
+                  <option value="USA">USA</option>
+                  <option value="UK">UK</option>
+                  <option value="CANADA">CANADA</option>
+                  <option value="AUSTRALIA">AUSTRALIA</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="picture">Upload Picture</label></td>
+              <td>
+                <input
+                  type="file"
+                  id="picture"
+                  name="picture"
+                  accept="image/*"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button type="button">Upload</button></td>
+            </tr>
+          </table>
+        </fieldset>
+
+        <br />
+
+        <!-- Course Details -->
+        <fieldset>
+          <legend>Course Details</legend>
+
+          <div class="row">
+            <label class="title" for="course">Select Course</label>
+            <select id="course" name="course">
+              <option value="Python-full-stack" selected>
+                Python-full-stack
+              </option>
+              <option value="java-full-stack">Java Full Stack</option>
+              <option value="data-science">Data Science</option>
+              <option value="web-development">Web Development</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <span>Delivery Mode</span>
+            <input type="checkbox" id="online" name="delivery" value="online" />
+            <label for="online">ONLINE</label>
+
+            <input
+              type="checkbox"
+              id="offline"
+              name="delivery"
+              value="offline"
+            />
+            <label for="offline">OFFLINE</label>
+          </div>
+
+          <div class="row">
+            <label class="title" for="comments">Comments</label>
+            <textarea id="comments" name="comments" rows="5"></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
